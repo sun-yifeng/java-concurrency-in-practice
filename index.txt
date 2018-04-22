@@ -1,8 +1,10 @@
 说明:此索引为章节代码和类名的对应关系，方便查阅。
-Introduction
+
+第1章 简介 Introduction
 1.1 Non-thread-safe sequence generator-UnsafeSequence 清单1-1 非线程安全的序列生成器.
 1.2 Thread-safe sequence generator-Sequence 清单1-2 线程安全的序列生成器.
-Thread Safety
+
+第2章 线程安全 Thread Safety
 2.1 A stateless servlet-StatelessFactorizer 清单2-1 无状态的对象servlet.
 2.2 Servlet that counts requests without the necessary synchronization-.
 2.3 Race condition in lazy initialization.
@@ -11,7 +13,8 @@ Thread Safety
 2.6 Servlet that caches last result, but with unnacceptably poor concurrency.
 2.7 Code that would deadlock if intrinsic locks were not reentrant.
 2.8 Servlet that caches its last request and result.
-Sharing Objects
+
+第3章 共享对象 Sharing Objects
 3.1 Sharing variables without synchronization.
 3.2 Non-thread-safe mutable integer holder.
 3.3 Thread-safe mutable integer holder.
@@ -27,7 +30,8 @@ Sharing Objects
 3.13 Caching the last result using a volatile reference to an immutable holder object.
 3.14 Publishing an object without adequate synchronization.
 3.15 Class at risk of failure if not properly published.
-Composing Objects
+
+第4章 组合对象 Composing Objects
 4.1 Simple thread-safe counter using the Java monitor pattern.
 4.2 Using confinement to ensure thread safety.
 4.3 Guarding state with a private lock.
@@ -44,7 +48,8 @@ Composing Objects
 4.14 Non-thread-safe attempt to implement put-if-absent.
 4.15 Implementing put-if-absent with client-side locking.
 4.16 Implementing put-if-absent using composition.
-Building Blocks
+
+第5章 构建模块 Building Blocks
 5.1 Compound actions on a Vector that may produce confusing results.
 5.2 Compound actions on Vector using client-side locking.
 5.3 Iteration that may throw ArrayIndexOutOfBoundsException. (fragment)
@@ -65,7 +70,8 @@ Building Blocks
 5.18 Memoizing wrapper using FutureTask.
 5.19 Final implementation of Memoizer.
 5.20 Factorizing servlet that caches results using Memoizer.
-Task Execution
+
+第6章 任务执行 Task Execution
 6.1 Sequential web server.
 6.2 Web server that starts a new thread for each request.
 6.3 Executor interface. (external link to Javadoc)
@@ -83,7 +89,8 @@ Task Execution
 6.15 Using CompletionService to render page elements as they become available.
 6.16 Fetching an advertisement with a time budget.
 6.17 Requesting travel quotes under a time budget.
-Cancellation and Shutdown
+
+第7章 取消与关闭 Cancellation and Shutdown
 7.1 Using a volatile field to hold cancellation state.
 7.2 Generating a second's worth of prime numbers.
 7.3 Unreliable cancellation that can leave producers stuck in a blocking operation.
@@ -110,7 +117,8 @@ Cancellation and Shutdown
 7.24 UncaughtExceptionHandler interface. (external link to Javadoc)
 7.25 UncaughtExceptionHandler that logs the exception.
 7.26 Registering a shutdown hook to stop the logging service. (fragment)
-Applying Thread Pools
+
+第8章 线程池的使用 Applying Thread Pools
 8.1 Task that deadlocks in a single-threaded Executor.
 8.2 General constructor for ThreadPoolExecutor. (external link to Javadoc)
 8.3 Creating a fixed-sized thread pool with a bounded queue and the caller-runs saturation policy. (fragment)
@@ -129,7 +137,8 @@ Applying Thread Pools
 8.16 Concurrent version of puzzle solver.
 8.17 Result-bearing latch used by ConcurrentPuzzleSolver.
 8.18 Solver that recognizes when no solution exists.
-GUI Applications
+
+第9章 用户图像界面的应用 GUI Applications
 9.1 Implementing SwingUtilities using an Executor.
 9.2 Executor built atop SwingUtilities.
 9.3 Simple event listener. (fragment)
@@ -138,7 +147,8 @@ GUI Applications
 9.6 Cancelling a long-running task.
 9.7 Background task class supporting cancellation, completion notification, and progress notification.
 9.8 Initiating a long-running, cancellable task with BackgroundTask.
-Avoiding Liveness Hazards
+
+第10章 避免活跃性的危险 Avoiding Liveness Hazards
 10.1 Simple lock-ordering deadlock.
 10.2 Dynamic lock-ordering deadlock.
 10.3 Inducing a lock ordering to avoid deadlock.
@@ -146,7 +156,8 @@ Avoiding Liveness Hazards
 10.5 Lock-ordering deadlock between cooperating objects.
 10.6 Using open calls to avoiding deadlock between cooperating objects.
 10.7 Portion of thread dump after deadlock. (not a code listing)
-Performance and Scalability
+
+第11章 性能与可伸缩性 Performance and Scalability
 11.1 Serialized access to a task queue.
 11.2 Synchronization that has no effect. (fragment)
 11.3 Candidate for lock elision.
@@ -155,7 +166,8 @@ Performance and Scalability
 11.6 Candidate for lock splitting.
 11.7 ServerStatus refactored to use split locks.
 11.8 Hash-based map using lock striping.
-Testing Concurrent Programs
+
+第12章 并发程序的测试 Testing Concurrent Programs
 12.1 Bounded buffer using Semaphore.
 12.2 Basic unit tests for BoundedBuffer.
 12.3 Testing blocking and responsiveness to interruption.
@@ -169,7 +181,8 @@ Testing Concurrent Programs
 12.11 Barrier-based timer.
 12.12 Testing with a barrier-based timer.
 12.13 Driver program for TimedPutTakeTest.
-Explicit Locks
+
+第13章 显示锁 Explicit Locks
 13.1 Lock interface. (external link to Javadoc)
 13.2 Guarding object state using ReentrantLock. (fragment)
 13.3 Avoiding lock-ordering deadlock using try Lock.
@@ -177,7 +190,8 @@ Explicit Locks
 13.5 Interruptible lock acquisition.
 13.6 ReadWriteLock interface. (external link to Javadoc)
 13.7 Wrapping a Map with a read-write lock.
-Building Custom Synchronizers
+
+第14章 构建自定义的同步 Building Custom Synchronizers
 14.1 Structure of blocking state-dependent actions. (fragment)
 14.2 Base class for bounded buffer implementations.
 14.3 Bounded buffer that balks when preconditions are not met.
@@ -194,7 +208,8 @@ Building Custom Synchronizers
 14.14 Binary latch using AbstractQueuedSynchronizer.
 14.15 tryAcquire implementation from nonfairReentrantLock. (See JDK source)
 14.16 tryAcquireShared and tryReleaseShared from Semaphore. (See JDK source)
-Atomic Variables and Nonblocking Synchronization
+
+第15章 原子变量与非阻塞同步 Atomic Variables and Nonblocking Synchronization
 15.1 Simulated CAS operation.
 15.2 Nonblocking counter using CAS.
 15.3 Preserving multivariable invariants using CAS.
