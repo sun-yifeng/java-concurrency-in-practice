@@ -1,6 +1,6 @@
 package com.sunyf.concurrency;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * UnsafeSequence

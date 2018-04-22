@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.*;
 import java.util.concurrent.*;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 

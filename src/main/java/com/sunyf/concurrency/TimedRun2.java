@@ -2,7 +2,7 @@ package com.sunyf.concurrency;
 
 import java.util.concurrent.*;
 import static java.util.concurrent.Executors.newScheduledThreadPool;
-import static net.jcip.examples.LaunderThrowable.launderThrowable;
+import static com.sunyf.concurrency.LaunderThrowable.launderThrowable;
 
 /**
  * TimedRun2

@@ -5,7 +5,7 @@ import java.math.BigInteger;
 import java.util.*;
 import java.util.concurrent.*;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * PrimeGenerator

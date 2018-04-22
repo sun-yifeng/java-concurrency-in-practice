@@ -3,7 +3,7 @@ package com.sunyf.concurrency;
 import java.util.*;
 import java.util.regex.*;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * BetterAttributeStore

@@ -2,7 +2,7 @@ package com.sunyf.concurrency;
 
 import java.util.concurrent.*;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * BoundedBuffer

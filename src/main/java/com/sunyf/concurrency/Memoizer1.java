@@ -3,7 +3,7 @@ package com.sunyf.concurrency;
 import java.math.BigInteger;
 import java.util.*;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * Memoizer1

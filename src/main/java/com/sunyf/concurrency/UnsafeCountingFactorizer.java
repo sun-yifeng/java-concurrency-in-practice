@@ -3,7 +3,7 @@ package com.sunyf.concurrency;
 import java.math.BigInteger;
 import javax.servlet.*;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * UnsafeCountingFactorizer

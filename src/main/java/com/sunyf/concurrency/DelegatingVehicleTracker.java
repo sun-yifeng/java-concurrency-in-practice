@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 import java.awt.*;
 import java.awt.Point;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * DelegatingVehicleTracker

@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.concurrent.atomic.*;
 import javax.servlet.*;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * CountingFactorizer

@@ -2,7 +2,7 @@ package com.sunyf.concurrency;
 
 import java.util.concurrent.locks.*;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * ReentrantLockPseudoRandom

@@ -2,7 +2,7 @@ package com.sunyf.concurrency;
 
 import java.util.*;
 import java.util.concurrent.*;
-import static net.jcip.examples.LaunderThrowable.launderThrowable;
+import static com.sunyf.concurrency.LaunderThrowable.launderThrowable;
 
 /**
  * FutureRenderer

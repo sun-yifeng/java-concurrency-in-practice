@@ -2,8 +2,8 @@ package com.sunyf.concurrency;
 
 import java.util.*;
 
-import net.jcip.examples.DynamicOrderDeadlock.Account;
-import net.jcip.examples.DynamicOrderDeadlock.DollarAmount;
+import com.sunyf.concurrency.DynamicOrderDeadlock.Account;
+import com.sunyf.concurrency.DynamicOrderDeadlock.DollarAmount;
 
 /**
  * DemonstrateDeadlock

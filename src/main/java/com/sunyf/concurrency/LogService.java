@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.concurrent.*;
 
-import net.jcip.annotations.*;
+import com.sunyf.annotations.*;
 
 /**
  * LogService
