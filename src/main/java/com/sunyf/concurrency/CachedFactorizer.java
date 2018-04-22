@@ -27,17 +27,16 @@ public class CachedFactorizer extends GenericServlet implements Servlet {
     @GuardedBy("this")
     private long cacheHits;
 
-    public synchronized long getHits() {
-        return hits;
-    }
-
+    // 同步锁
     public synchronized double getCacheHitRatio() {
         return (double) cacheHits / (double) hits;
     }
 
+    // 同步锁
     public void service(ServletRequest req, ServletResponse resp) {
         BigInteger i = extractFromRequest(req);
         BigInteger[] factors = null;
+        // 同步锁
         synchronized (this) {
             ++hits;
             if (i.equals(lastNumber)) {
@@ -53,6 +52,11 @@ public class CachedFactorizer extends GenericServlet implements Servlet {
             }
         }
         encodeIntoResponse(resp, factors);
+    }
+
+    // 同步锁
+    public synchronized long getHits() {
+        return hits;
     }
 
     void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
