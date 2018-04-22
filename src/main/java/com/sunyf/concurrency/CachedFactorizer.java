@@ -16,10 +16,10 @@ import com.sunyf.annotations.*;
 public class CachedFactorizer extends GenericServlet implements Servlet {
 
     @GuardedBy("this")
-    private BigInteger lastNumber;
+    private BigInteger lastNumber; // 实例变量，上次的数字
 
     @GuardedBy("this")
-    private BigInteger[] lastFactors;
+    private BigInteger[] lastFactors; // 实例变量
 
     @GuardedBy("this")
     private long hits;
@@ -28,11 +28,15 @@ public class CachedFactorizer extends GenericServlet implements Servlet {
     private long cacheHits;
 
     // 同步锁
+    public synchronized long getHits() {
+        return hits;
+    }
+
+    // 同步锁
     public synchronized double getCacheHitRatio() {
         return (double) cacheHits / (double) hits;
     }
 
-    // 同步锁
     public void service(ServletRequest req, ServletResponse resp) {
         BigInteger i = extractFromRequest(req);
         BigInteger[] factors = null;
@@ -52,11 +56,6 @@ public class CachedFactorizer extends GenericServlet implements Servlet {
             }
         }
         encodeIntoResponse(resp, factors);
-    }
-
-    // 同步锁
-    public synchronized long getHits() {
-        return hits;
     }
 
     void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
