@@ -15,6 +15,7 @@ import com.sunyf.annotations.*;
 
 @ThreadSafe
 public class SynchronizedFactorizer extends GenericServlet implements Servlet {
+
     @GuardedBy("this") private BigInteger lastNumber;
     @GuardedBy("this") private BigInteger[] lastFactors;
 

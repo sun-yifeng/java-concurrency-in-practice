@@ -1,18 +1,18 @@
-说明:此索引为章节代码和类名的对应关系，方便查阅。
+说明:章节和类名的对应关系，方便查阅。
 
 第1章 简介 Introduction
-1.1 Non-thread-safe sequence generator-UnsafeSequence 清单1-1 非线程安全的序列生成器.
-1.2 Thread-safe sequence generator-Sequence 清单1-2 线程安全的序列生成器.
+1.1 Non-thread-safe sequence generator 非线程安全的序列生成器 StatelessFactorizer.
+1.2 Thread-safe sequence generator 线程安全的序列生成器 Sequence.
 
 第2章 线程安全 Thread Safety
-2.1 A stateless servlet-StatelessFactorizer 清单2-1 无状态的对象servlet.
-2.2 Servlet that counts requests without the necessary synchronization-.
-2.3 Race condition in lazy initialization.
-2.4 Servlet that counts requests using AtomicLong.
-2.5 Servlet that attempts to cache its last result without adequate atomicity.
-2.6 Servlet that caches last result, but with unnacceptably poor concurrency.
-2.7 Code that would deadlock if intrinsic locks were not reentrant.
-2.8 Servlet that caches its last request and result.
+2.1 A stateless servlet 无状态的对象 StatelessFactorizer.
+2.2 Servlet that counts requests without the necessary synchronization 未同步的有状态对象 UnsafeCountingFactorizer.
+2.3 Race condition in lazy initialization 延时初始化的竞态条件（单例模式）LazyInitRace.
+2.4 Servlet that counts requests using AtomicLong 使用原子类的计算器 CountingFactorizer.
+2.5 Servlet that attempts to cache its last result without adequate atomicity 多个原子类的成员变量 UnsafeCachingFactorizer.
+2.6 Servlet that caches last result, but with unnacceptably poor concurrency 正确同步但是有性能问题 SynchronizedFactorizer.
+2.7 Code that would deadlock if intrinsic locks were not reentrant 可以重入锁避免死锁 Widget.
+2.8 Servlet that caches its last request and result 缓存最新的因素和结果 CachedFactorizer.
 
 第3章 共享对象 Sharing Objects
 3.1 Sharing variables without synchronization.

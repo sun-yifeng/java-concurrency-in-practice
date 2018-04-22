@@ -9,11 +9,13 @@ package com.sunyf.concurrency;
  */
 
 class Widget {
+    // do sth
     public synchronized void doSomething() {
     }
 }
 
 class LoggingWidget extends Widget {
+    // do sth
     public synchronized void doSomething() {
         System.out.println(toString() + ": calling doSomething");
         super.doSomething();

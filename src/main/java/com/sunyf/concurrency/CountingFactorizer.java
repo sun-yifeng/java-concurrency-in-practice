@@ -8,7 +8,7 @@ import com.sunyf.annotations.*;
 
 /**
  * CountingFactorizer
- *
+ * <p>
  * Servlet that counts requests using AtomicLong
  *
  * @author Brian Goetz and Tim Peierls
@@ -17,7 +17,9 @@ import com.sunyf.annotations.*;
 public class CountingFactorizer extends GenericServlet implements Servlet {
     private final AtomicLong count = new AtomicLong(0);
 
-    public long getCount() { return count.get(); }
+    public long getCount() {
+        return count.get();
+    }
 
     public void service(ServletRequest req, ServletResponse resp) {
         BigInteger i = extractFromRequest(req);
@@ -26,7 +28,14 @@ public class CountingFactorizer extends GenericServlet implements Servlet {
         encodeIntoResponse(resp, factors);
     }
 
-    void encodeIntoResponse(ServletResponse res, BigInteger[] factors) {}
-    BigInteger extractFromRequest(ServletRequest req) {return null; }
-    BigInteger[] factor(BigInteger i) { return null; }
+    void encodeIntoResponse(ServletResponse res, BigInteger[] factors) {
+    }
+
+    BigInteger extractFromRequest(ServletRequest req) {
+        return null;
+    }
+
+    BigInteger[] factor(BigInteger i) {
+        return null;
+    }
 }
