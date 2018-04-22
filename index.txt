@@ -218,7 +218,8 @@
 15.6 Nonblocking stack using Treiber's algorithm.
 15.7 Insertion in the Michael-Scott nonblocking queue algorithm.
 15.8 Using atomic field updaters in ConcurrentLinkedQueue. (fragment)
-The Java Memory Model
+
+第16章 java内存模式 The Java Memory Model
 16.1 Insufficiently synchronized program that can have surprising results.
 16.2 Inner class of FutureTask illustrating synchronization piggybacking. (See JDK source)
 16.3 Unsafe lazy initialization.

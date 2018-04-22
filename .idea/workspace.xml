@@ -4,12 +4,6 @@
     <list default="true" id="0be8117d-dcdb-448e-bebb-ada0026fcfd8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.txt" afterPath="$PROJECT_DIR$/index.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/CachedFactorizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/CachedFactorizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/CountingFactorizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/CountingFactorizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/NonreentrantDeadlock.java" afterPath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/NonreentrantDeadlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/SynchronizedFactorizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/SynchronizedFactorizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/UnsafeCachingFactorizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/UnsafeCachingFactorizer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/UnsafeCountingFactorizer.java" afterPath="$PROJECT_DIR$/src/main/java/com/sunyf/concurrency/UnsafeCountingFactorizer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,8 +19,8 @@
       <file leaf-file-name="index.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+            <state relative-caret-position="247">
+              <caret line="221" column="13" lean-forward="false" selection-start-line="221" selection-start-column="13" selection-end-line="221" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -429,12 +423,12 @@
       <updated>1524383537694</updated>
       <workItem from="1524383542763" duration="1364000" />
       <workItem from="1524385324699" duration="2008000" />
-      <workItem from="1524387634451" duration="3859000" />
+      <workItem from="1524387634451" duration="3999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7231000" />
+    <option name="totallyTimeSpent" value="7371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -908,8 +902,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+        <state relative-caret-position="247">
+          <caret line="221" column="13" lean-forward="false" selection-start-line="221" selection-start-column="13" selection-end-line="221" selection-end-column="13" />
           <folding />
         </state>
       </provider>
