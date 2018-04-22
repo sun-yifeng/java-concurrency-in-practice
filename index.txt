@@ -1,0 +1,214 @@
+说明:此索引为章节代码和类名的对应关系，方便查阅。
+Introduction
+1.1 Non-thread-safe sequence generator-UnsafeSequence 清单1-1 非线程安全的序列生成器.
+1.2 Thread-safe sequence generator-Sequence 清单1-2 线程安全的序列生成器.
+Thread Safety
+2.1 A stateless servlet-StatelessFactorizer 清单2-1 无状态的对象servlet.
+2.2 Servlet that counts requests without the necessary synchronization-.
+2.3 Race condition in lazy initialization.
+2.4 Servlet that counts requests using AtomicLong.
+2.5 Servlet that attempts to cache its last result without adequate atomicity.
+2.6 Servlet that caches last result, but with unnacceptably poor concurrency.
+2.7 Code that would deadlock if intrinsic locks were not reentrant.
+2.8 Servlet that caches its last request and result.
+Sharing Objects
+3.1 Sharing variables without synchronization.
+3.2 Non-thread-safe mutable integer holder.
+3.3 Thread-safe mutable integer holder.
+3.4 Counting sheep.
+3.5 Publishing an object.
+3.6 Allowing internal mutable state to escape.
+3.7 Implicitly allowing the this reference to escape.
+3.8 Using a factory method to prevent the this reference from escaping during construction.
+3.9 Thread confinement of local primitive and reference variables.
+3.10 Using ThreadLocal to ensure thread confinement.
+3.11 Immutable class built out of mutable underlying objects.
+3.12 Immutable holder for caching a number and its factors.
+3.13 Caching the last result using a volatile reference to an immutable holder object.
+3.14 Publishing an object without adequate synchronization.
+3.15 Class at risk of failure if not properly published.
+Composing Objects
+4.1 Simple thread-safe counter using the Java monitor pattern.
+4.2 Using confinement to ensure thread safety.
+4.3 Guarding state with a private lock.
+4.4 Monitor-based vehicle tracker implementation.
+4.5 Mutable point class similar to java.awt.Point.
+4.6 Immutable Point class used by DelegatingVehicleTracker.
+4.7 Delegating thread safety to a ConcurrentHashMap.
+4.8 Returning a static copy of the location set instead of a 'live' one.
+4.9 Delegating thread safety to multiple underlying state variables.
+4.10 Number range class that does not sufficiently protect its invariants.
+4.11 Thread-safe mutable point class.
+4.12 Vehicle tracker that safely publishes underlying state.
+4.13 Extending Vector to have a put-if-absent method.
+4.14 Non-thread-safe attempt to implement put-if-absent.
+4.15 Implementing put-if-absent with client-side locking.
+4.16 Implementing put-if-absent using composition.
+Building Blocks
+5.1 Compound actions on a Vector that may produce confusing results.
+5.2 Compound actions on Vector using client-side locking.
+5.3 Iteration that may throw ArrayIndexOutOfBoundsException. (fragment)
+5.4 Iteration with client-side locking. (fragment)
+5.5 Iterating a List with an Iterator. (fragment)
+5.6 Iteration hidden within string concatenation.
+5.7 ConcurrentMap interface. (external link to Javadoc)
+5.8 Producer and consumer tasks in a desktop search application.
+5.9 Starting the desktop search.
+5.10 Restoring the interrupted status so as not to swallow the interrupt.
+5.11 Using CountDownLatch for starting and stopping threads in timing tests.
+5.12 Using FutureTask to preload data that is needed later.
+5.13 Coercing an unchecked Throwable to a RuntimeException.
+5.14 Using Semaphore to bound a collection.
+5.15 Coordinating computation in a cellular automaton with CyclicBarrier.
+5.16 Initial cache attempt using HashMap and synchronization.
+5.17 Replacing HashMap with ConcurrentHashMap.
+5.18 Memoizing wrapper using FutureTask.
+5.19 Final implementation of Memoizer.
+5.20 Factorizing servlet that caches results using Memoizer.
+Task Execution
+6.1 Sequential web server.
+6.2 Web server that starts a new thread for each request.
+6.3 Executor interface. (external link to Javadoc)
+6.4 Web server using a thread pool.
+6.5 Executor that starts a new thread for each task.
+6.6 Executor that executes tasks synchronously in the calling thread.
+6.7 Lifecycle methods in ExecutorService. (external link to Javadoc, shows all methods, not just lifecycle methods)
+6.8 Web server with shutdown support.
+6.9 Class illustrating confusing Timer behavior.
+6.10 Rendering page elements sequentially.
+6.11 Callable and Future interfaces. (external links to Javadoc)
+6.12 Default implementation of newTaskFor in ThreadPoolExecutor. (See JDK source)
+6.13 Waiting for image download with Future.
+6.14 QueueingFuture class used by ExecutorCompletionService. (See JDK source)
+6.15 Using CompletionService to render page elements as they become available.
+6.16 Fetching an advertisement with a time budget.
+6.17 Requesting travel quotes under a time budget.
+Cancellation and Shutdown
+7.1 Using a volatile field to hold cancellation state.
+7.2 Generating a second's worth of prime numbers.
+7.3 Unreliable cancellation that can leave producers stuck in a blocking operation.
+7.4 Interruption methods in Thread. (external link to Javadoc, shows all Thread methods, not just interruption-related)
+7.5 Using interruption for cancellation.
+7.6 Propagating InterruptedException to callers. (fragment)
+7.7 Noncancelable task that restores interruption before exit.
+7.8 Scheduling an interrupt on a borrowed thread.
+7.9 Interrupting a task in a dedicated thread.
+7.10 Cancelling a task using Future.
+7.11 Encapsulating nonstandard cancellation in a Thread by overriding interrupt.
+7.12 Encapsulating nonstandard cancellation in a task with newTaskFor.
+7.13 Producer-consumer logging service with no shutdown support.
+7.14 Unreliable way to add shutdown support to the logging service. (fragment)
+7.15 Adding reliable cancellation to LogWriter.
+7.16 Logging service that uses an ExecutorService.
+7.17 Shutdown with poison pill.
+7.18 Producer thread for IndexingService.
+7.19 Consumer thread for IndexingService.
+7.20 Using a private Executor whose lifetime is bounded by a method call.
+7.21 ExecutorService that keeps track of cancelled tasks after shutdown.
+7.22 Using TrackingExecutorService to save unfinished tasks for later execution.
+7.23 Typical thread-pool worker thread structure. (fragment)
+7.24 UncaughtExceptionHandler interface. (external link to Javadoc)
+7.25 UncaughtExceptionHandler that logs the exception.
+7.26 Registering a shutdown hook to stop the logging service. (fragment)
+Applying Thread Pools
+8.1 Task that deadlocks in a single-threaded Executor.
+8.2 General constructor for ThreadPoolExecutor. (external link to Javadoc)
+8.3 Creating a fixed-sized thread pool with a bounded queue and the caller-runs saturation policy. (fragment)
+8.4 Using a Semaphore to throttle task submission.
+8.5 ThreadFactory interface. (external link to Javadoc)
+8.6 Custom thread factory.
+8.7 Custom thread base class.
+8.8 Modifying an Executor created with the standard factories. (fragment)
+8.9 Thread pool extended with logging and timing.
+8.10 Transforming sequential execution into parallel execution.
+8.11 Transforming sequential tail-recursion into parallelized recursion.
+8.12 Waiting for results to be calculated in parallel.
+8.13 Abstraction for puzzles like the 'sliding blocks puzzle'.
+8.14 Link node for the puzzle solver framework.
+8.15 Sequential puzzle solver.
+8.16 Concurrent version of puzzle solver.
+8.17 Result-bearing latch used by ConcurrentPuzzleSolver.
+8.18 Solver that recognizes when no solution exists.
+GUI Applications
+9.1 Implementing SwingUtilities using an Executor.
+9.2 Executor built atop SwingUtilities.
+9.3 Simple event listener. (fragment)
+9.4 Binding a long-running task to a visual component.
+9.5 Long-running task with user feedback.
+9.6 Cancelling a long-running task.
+9.7 Background task class supporting cancellation, completion notification, and progress notification.
+9.8 Initiating a long-running, cancellable task with BackgroundTask.
+Avoiding Liveness Hazards
+10.1 Simple lock-ordering deadlock.
+10.2 Dynamic lock-ordering deadlock.
+10.3 Inducing a lock ordering to avoid deadlock.
+10.4 Driver loop that induces deadlock under typical conditions.
+10.5 Lock-ordering deadlock between cooperating objects.
+10.6 Using open calls to avoiding deadlock between cooperating objects.
+10.7 Portion of thread dump after deadlock. (not a code listing)
+Performance and Scalability
+11.1 Serialized access to a task queue.
+11.2 Synchronization that has no effect. (fragment)
+11.3 Candidate for lock elision.
+11.4 Holding a lock longer than necessary.
+11.5 Reducing lock duration.
+11.6 Candidate for lock splitting.
+11.7 ServerStatus refactored to use split locks.
+11.8 Hash-based map using lock striping.
+Testing Concurrent Programs
+12.1 Bounded buffer using Semaphore.
+12.2 Basic unit tests for BoundedBuffer.
+12.3 Testing blocking and responsiveness to interruption.
+12.4 Medium-quality random number generator suitable for testing.
+12.5 Producer-consumer test program for BoundedBuffer.
+12.6 Producer and consumer classes used in PutTakeTest.
+12.7 Testing for resource leaks.
+12.8 Thread factory for testing ThreadPoolExecutor.
+12.9 Test method to verify thread pool expansion.
+12.10 Using Thread.yield to generate more interleavings. (fragment)
+12.11 Barrier-based timer.
+12.12 Testing with a barrier-based timer.
+12.13 Driver program for TimedPutTakeTest.
+Explicit Locks
+13.1 Lock interface. (external link to Javadoc)
+13.2 Guarding object state using ReentrantLock. (fragment)
+13.3 Avoiding lock-ordering deadlock using try Lock.
+13.4 Locking with a time budget.
+13.5 Interruptible lock acquisition.
+13.6 ReadWriteLock interface. (external link to Javadoc)
+13.7 Wrapping a Map with a read-write lock.
+Building Custom Synchronizers
+14.1 Structure of blocking state-dependent actions. (fragment)
+14.2 Base class for bounded buffer implementations.
+14.3 Bounded buffer that balks when preconditions are not met.
+14.4 Client logic for calling GrumpyBoundedBuffer.
+14.5 Bounded buffer using crude blocking.
+14.6 Bounded buffer using condition queues.
+14.7 Canonical form for state-dependent methods. (fragment)
+14.8 Using conditional notification in BoundedBuffer.put.
+14.9 Recloseable gate using wait and notifyAll.
+14.10 Condition interface. (external link to Javadoc)
+14.11 Bounded buffer using explicit condition variables.
+14.12 Counting semaphore implemented using Lock.
+14.13 Canonical forms for acquisition and release in AQS. (fragment)
+14.14 Binary latch using AbstractQueuedSynchronizer.
+14.15 tryAcquire implementation from nonfairReentrantLock. (See JDK source)
+14.16 tryAcquireShared and tryReleaseShared from Semaphore. (See JDK source)
+Atomic Variables and Nonblocking Synchronization
+15.1 Simulated CAS operation.
+15.2 Nonblocking counter using CAS.
+15.3 Preserving multivariable invariants using CAS.
+15.4 Random number generator using ReentrantLock.
+15.5 Random number generator using AtomicInteger.
+15.6 Nonblocking stack using Treiber's algorithm.
+15.7 Insertion in the Michael-Scott nonblocking queue algorithm.
+15.8 Using atomic field updaters in ConcurrentLinkedQueue. (fragment)
+The Java Memory Model
+16.1 Insufficiently synchronized program that can have surprising results.
+16.2 Inner class of FutureTask illustrating synchronization piggybacking. (See JDK source)
+16.3 Unsafe lazy initialization.
+16.4 Thread-safe lazy initialization.
+16.5 Eager initialization.
+16.6 Lazy initialization holder class idiom.
+16.7 Double-checked-locking antipattern.
+16.8 Initialization safety for immutable objects.

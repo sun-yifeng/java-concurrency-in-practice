@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sunyf</groupId>
+    <artifactId>java.concurrency.in.practice</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <!--<springframework.version>2.5.6</springframework.version>-->
+        <!--<junit.version>4.7</junit.version>-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!--引入javax.servlet.*-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <!--servlet api-->
+            <artifactId>servlet-api</artifactId>
+            <version>2.4</version>
+            <!--provided依赖范围表示不会打包到war中，web容器中已经有这些包，但是编译的时候需要这些包-->
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
